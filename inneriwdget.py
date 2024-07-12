@@ -1,5 +1,4 @@
 import sys
-import inneriwdget
 from PyQt5.QtWidgets import *
 
 class popup(QWidget):
