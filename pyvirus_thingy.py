@@ -22,7 +22,7 @@ class PopupApp(QWidget):
         self.setLayout(layout)
 
     def show_popup(self):
-        reply = QMessageBox.information(self, 'Popup', 'Button Pressed!', QMessageBox.Ok)
+        reply = QMessageBox.information(self, 'Popup', 'all your base are belong to us', QMessageBox.Ok)
         if reply == QMessageBox.Ok:
             self.show_popup()
 
