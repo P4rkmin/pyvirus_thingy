@@ -1,5 +1,6 @@
 import sys
-from PyQt5.QtWidgets import QWidget, QPushButton, QMessageBox, QVBoxLayout
+import innerwidget
+from PyQt5.QtWidgets import *
 
 class popup(QWidget):
     def __init__(self, title, image, text):

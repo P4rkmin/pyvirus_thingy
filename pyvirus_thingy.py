@@ -1,6 +1,6 @@
 import sys
 import innerwidget
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox, QVBoxLayout
+from PyQt5.QtWidgets import *
 
 #Main widget
 class PopupApp(QWidget):
@@ -22,7 +22,9 @@ class PopupApp(QWidget):
         self.setLayout(layout)
 
     def show_popup(self):
-        QMessageBox.information(self, 'Popup', 'Button Pressed!')
+        reply = QMessageBox.information(self, 'Popup', 'Button Pressed!', QMessageBox.Ok)
+        if reply == QMessageBox.Ok:
+            self.show_popup()
 
     
 if __name__ == '__main__':
