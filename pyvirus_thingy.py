@@ -12,6 +12,9 @@ class PopupApp(QWidget):
     def initUI(self):
         self.setWindowTitle('meep')
 
+        # Set the main window size, I have used a different method in the show_popup def
+        self.resize(400, 300)  
+
         layout = QVBoxLayout()
 
         self.button = QPushButton('Press me', self)
@@ -22,7 +25,18 @@ class PopupApp(QWidget):
         self.setLayout(layout)
 
     def show_popup(self):
-        reply = QMessageBox.information(self, 'Popup', 'all your base are belong to us', QMessageBox.Ok)
+
+        # Create a custom message box
+        msg = QMessageBox(self)
+        msg.setWindowTitle('Popup')
+        msg.setText('all your base are belong to us')
+        msg.setStandardButtons(QMessageBox.Ok)
+
+        # Set the size of the popup window
+        msg.setStyleSheet("QLabel{min-width: 350px; min-height: 50px;}")
+
+        # Show the message box and wait for user interaction
+        reply = msg.exec_()
         if reply == QMessageBox.Ok:
             self.show_popup()
 
