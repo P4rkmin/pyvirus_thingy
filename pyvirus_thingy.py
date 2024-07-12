@@ -10,7 +10,7 @@ class PopupApp(QWidget):
         self.initUI()
 
     def initUI(self):
-        self.setWindowTitle('Popup Example')
+        self.setWindowTitle('meep')
 
         layout = QVBoxLayout()
 
