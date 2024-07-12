@@ -1,5 +1,5 @@
 import sys
-import innerwidget
+import inneriwdget
 from PyQt5.QtWidgets import *
 
 #Main widget
